@@ -1,0 +1,40 @@
+<div *ngIf="loading">
+
+  <h1> {{bookCategoryName.value}} Books</h1>
+
+   <div>
+      <button  class="btn btn-primary" (click)="continueShopping()">Checkout for shoping</button>
+   </div>
+  <br>
+  <div *ngFor="let book of books">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{book.booksTitle}}</h5>
+        <p class="card-text">Price : ₹{{book.price}}</p>
+        <p class="card-text"> <button  class="btn btn-primary" (click)="addToCart(book.id)">Add to
+            Cart</button> </p>
+
+        <label class="container"> buy
+          <input type="checkbox" [(ngModel)]="book.isSelected">
+          <span class="checkmark"></span>
+        </label>
+        <div>
+          <p>
+            Quantity
+            <input type="number" #price [(ngModel)]="book.units" value="1" min="1" value="1" max="10" style="width:40px"
+              name="Quantity">
+
+            Total Price : ₹{{book.price * price.value}}
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+   </div>
+    <br>
+    <div>
+      <button class="btn btn-primary" (click)="continueShopping()">Checkout for shoping</button>
+    </div>
+  
+</div>

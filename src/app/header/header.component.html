@@ -1,0 +1,11 @@
+
+<div class="topnav">
+    <a class="active" routerLink="/">Books</a>
+    <a  class="notification"   [routerLink]="['/cart',  currentUser.userId]" >Cart &nbsp; &nbsp; <b><span *ngIf="totalCount> 0? true : false" class="badge">{{totalCount}}</span></b></a> 
+    <a class="notification"   [routerLink]="['/order']">Orders</a>
+    <div class="topnav-right">
+      <a >{{currentUser.userName}}</a>
+      <a (click)="logout()">Logout</a>
+    </div>
+  </div>
+

@@ -1,0 +1,37 @@
+
+<h1>Order Details</h1>
+<br>
+<div><button class="btn btn-primary"(click)="orderCancel()" >Cancel Order</button></div>
+<br>
+<table border="1">
+    <thead>
+        <tr>
+            
+            <th>bookName</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>TotalPrice</th>
+            <th>orderDate</th>
+            <th>orderStatus</th>
+            <th>select all</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of orderDetails">
+            <td>{{ order.bookName }}</td>
+            <td>{{ order.units }}</td>
+            <td>{{ order.unitPrice }}</td>
+            <td>{{ order.totalPrice }}</td>
+            <td>{{ order.orderDate }}</td>
+            <td>{{ order.orderStatus }}</td>
+            <td >
+                <label *ngIf="order.orderStatus =='OrderPlaced'" class="container">
+                    <input type="checkbox"  [(ngModel)] ="order.isCancled" />                     
+                    <span class="checkmark"></span>
+                </label>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<div><button class="btn btn-primary" (click)="orderCancel()">Cancel Order</button></div>

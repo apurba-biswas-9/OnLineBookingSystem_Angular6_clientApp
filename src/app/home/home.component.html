@@ -1,0 +1,20 @@
+﻿
+<h1>Types Of Books</h1>
+ <div *ngFor="let user of books">
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <!-- <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+      <a class="btn btn-primary" [routerLink]="['/book', user.key]" >{{user.value}}</a>
+    </div>
+  </div>
+</div>
+
+<!-- <p>You're logged in with Angular 7!!</p>
+<h3>All registered users:</h3>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li>
+</ul> -->
