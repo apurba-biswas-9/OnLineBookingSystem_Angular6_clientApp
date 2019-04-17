@@ -8,21 +8,21 @@ export class CartService {
     constructor(private http: HttpClient) { }
 
     getAll() {
-        return this.http.get<any[]>(`${environment.apiBooks}/api/Book/Categories`);
+        return this.http.get<any[]>(`${environment.apiGateway}/Book/Categories`);
     }
  
    
-    getCount(customerId: number) {
-        return this.http.get<any>(`${environment.cartApi}/api/Cart/Count/${customerId}`);
+    getCount(id: number) {
+        return this.http.get<any>(`${environment.apiGateway}/Cart/Count/${id}`);
     }
 
-    getCarts(customerId: number) {
-        return this.http.get<any>(`${environment.BooksInfo}/api/Basket/BookInfo/${customerId}`);
+    getCarts(id: number) {
+        return this.http.get<any>(`${environment.apiGateway}/Basket/BookInfo/${id}`);
     }
 
 
     postCart(cart: Cart) {
-        return this.http.post(`${environment.cartApi}/api/Cart`, cart);
+        return this.http.post(`${environment.apiGateway}/Cart`, cart);
     }
 
     // update(user: User) {
@@ -30,6 +30,6 @@ export class CartService {
     // }
 
     delete(id: number) {
-        return this.http.delete(`${environment.cartApi}/api/Cart/${id}`);
+        return this.http.delete(`${environment.apiGateway}/Cart/${id}`);
     }
 }

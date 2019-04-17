@@ -7,8 +7,8 @@
  <div *ngFor="let book of books">
 <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">{{book.booksTitle}}</h5>
-      <p class="card-text">Price :  ₹{{book.price}}</p> 
+      <h5 class="card-title">{{book.BooksTitle}}</h5>
+      <p class="card-text">Price :  ₹{{book.Price}}</p> 
     
      <p>
       <label class="container"> 
@@ -22,10 +22,10 @@
       Quantity
       <input type="number" #price [(ngModel)]="book.units" value="1" min="1"  value="1"  max="10" style="width:40px" name="Quantity" >
 
-      Total Price :   ₹{{book.price * price.value}}
+      Total Price :   ₹{{book.Price * price.value}}
     </p>
   </div>
-    <p><button  class="btn btn-primary" (click)="deleteCart(book.cartId)" >Delete From Cart</button> </p>
+    <p><button  class="btn btn-primary" (click)="deleteCart(book.CartId)" >Delete From Cart</button> </p>
   </div>
 </div>
 </div>

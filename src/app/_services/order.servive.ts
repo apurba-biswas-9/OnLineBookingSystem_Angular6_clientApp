@@ -8,23 +8,23 @@ export class OrderService {
     constructor(private http: HttpClient) { }
 
     getAll() {
-        return this.http.get<any[]>(`${environment.orderApi}/api/Order`);
+        return this.http.get<any[]>(`${environment.apiGateway}/Order`);
     }  
 
     post(order: Order[]) {
-        return this.http.post(`${environment.orderApi}/api/Order`, order);
+        return this.http.post(`${environment.apiGateway}/Order`, order);
     }   
 
     UpdateOrderStatus( order: any) {
-        return this.http.post(`${environment.orderApi}/api/Order/UpdateOrderStatus`, order);
+        return this.http.post(`${environment.apiGateway}/Order/UpdateOrderStatus`, order);
     }   
 
     delete(id: number) {
-        return this.http.delete(`${environment.cartApi}/api/Order/${id}`);
+        return this.http.delete(`${environment.apiGateway}/Order/${id}`);
     }
 
-    getOrders(customerId: number) {
-        return this.http.get<any>(`${environment.orderGatewayApi}/api/Order/OrderDetails/${customerId}`);
+    getOrders(id: number) {
+        return this.http.get<any>(`${environment.apiGateway}/Order/OrderDetails/${id}`);
     }
 
 }

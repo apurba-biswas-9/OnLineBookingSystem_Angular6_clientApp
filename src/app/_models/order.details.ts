@@ -1,12 +1,12 @@
 export class OrderDetails {
- id: number;
-    bookName :  string;
-    units : number;
-    totalPrice : number;
-    orderDate : Date;
-    orderStatus : string;
-    unitPrice : number;
-    isCancled : boolean;
+ Id: number;
+    BookName :  string;
+    Units : number;
+    TotalPrice : number;
+    OrderDate : Date;
+    OrderStatus : string;
+    UnitPrice : number;
+    IsCancled : boolean;
 
 }
  

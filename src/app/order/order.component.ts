@@ -34,6 +34,7 @@ export class OrderComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {  
+
      this.loadOrders();
     }
 
@@ -46,6 +47,8 @@ export class OrderComponent implements OnInit, OnDestroy {
 
       this.sub =   this.orderService.getOrders(this.currentUser.userId).pipe().subscribe(orders => {
             this.orderDetails = orders;
+
+          console.log(this.orderDetails);
         });
     }   
    
@@ -55,13 +58,13 @@ export class OrderComponent implements OnInit, OnDestroy {
         this.alertService.clearAlert();      
         if (this.orderDetails.length > 0) 
         {
-            var list = this.orderDetails.filter(p => p.isCancled == true);
+            var list = this.orderDetails.filter(p => p.IsCancled == true);
             if (list.length <= 0) {
                 this.alertService.error("Please select items");
             }
             else
              {
-                let ids =  list.map(p=> { return p.id  });               
+                let ids =  list.map(p=> { return p.Id  });               
 
                 let data = new UpdateOrderStatus();
                 data.orderIds = ids;

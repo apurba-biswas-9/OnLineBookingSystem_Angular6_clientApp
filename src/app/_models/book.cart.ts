@@ -1,11 +1,11 @@
 export class BooksCart
 {
-    id: number;
-    booksTitle: string;  
-    bookCategories : number;
-    price: string; 
-    units : number;
+    Id: number;
+    BooksTitle: string;  
+    BookCategories : number;
+    Price: string; 
+    Units : number;
     isSelected : boolean;
-    cartId : number;
+    CartId : number;
 
 }

@@ -109,13 +109,15 @@ export class ShoppingComponent implements OnInit, OnDestroy {
             }
             else
             {               
-               let orders =  list.map(p =>  {                    
+               let orders =  list.map(p =>  {  
+                   console.log('p');
+            console.log(p);
                     let obj = new Order ();
-                    obj.BookId = p.id;
+                    obj.BookId = p.Id;
                    obj.CustomerId = this.currentUser.userId;
                     obj.OrderStatus = 1;
-                    obj.Quantity = p.units;
-                    obj.CartId = p.cartId;
+                    obj.Quantity = p.Units;
+                    obj.CartId = p.CartId;
                     return obj;
                 });
 

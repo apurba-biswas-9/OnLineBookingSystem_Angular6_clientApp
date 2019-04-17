@@ -11,10 +11,10 @@ export class BookService {
 
   
     getById(id: number) {
-        return this.http.get<Book[]>(`${environment.apiBooks}/api/Book/${id}`);
+        return this.http.get<Book[]>(`${environment.apiGateway}/Book/${id}`);
     }
 
     getBookCategories(id : number) {
-        return this.http.get(`${environment.apiBooks}/api/Book/Categories/${id}`);
+        return this.http.get(`${environment.apiGateway}/Book/Categories/${id}`);
     }
 }

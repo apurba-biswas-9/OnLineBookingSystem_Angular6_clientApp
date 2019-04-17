@@ -4,12 +4,12 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:59045',
-  apiBooks: 'http://localhost:59097',
-  cartApi: 'http://localhost:59196',
-  BooksInfo : 'http://localhost:57829',
-  orderApi: 'http://localhost:59228',
-  orderGatewayApi: 'http://localhost:57829'
+apiGateway: 'http://localhost:58244/api/ApiGateway',
+  // apiBooks: 'http://localhost:58244/api/ApiGateway',
+  // cartApi: 'http://localhost:58244/api/ApiGateway',
+  // BooksInfo: 'http://localhost:58244/api/ApiGateway',
+  // orderApi: 'http://localhost:58244/api/ApiGateway',
+  // orderGatewayApi: 'http://localhost:58244/api/ApiGateway'
 };
 
 /*

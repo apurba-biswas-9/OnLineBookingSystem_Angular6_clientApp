@@ -18,15 +18,15 @@
     </thead>
     <tbody>
         <tr *ngFor="let order of orderDetails">
-            <td>{{ order.bookName }}</td>
-            <td>{{ order.units }}</td>
-            <td>{{ order.unitPrice }}</td>
-            <td>{{ order.totalPrice }}</td>
-            <td>{{ order.orderDate }}</td>
-            <td>{{ order.orderStatus }}</td>
+            <td>{{ order.BookName }}</td>
+            <td>{{ order.Units }}</td>
+            <td>{{ order.UnitPrice }}</td>
+            <td>{{ order.TotalPrice }}</td>
+            <td>{{ order.OrderDate }}</td>
+            <td>{{ order.OrderStatus }}</td>
             <td >
-                <label *ngIf="order.orderStatus =='OrderPlaced'" class="container">
-                    <input type="checkbox"  [(ngModel)] ="order.isCancled" />                     
+                <label *ngIf="order.OrderStatus =='OrderPlaced'" class="container">
+                    <input type="checkbox"  [(ngModel)] ="order.IsCancled" />                     
                     <span class="checkmark"></span>
                 </label>
             </td>

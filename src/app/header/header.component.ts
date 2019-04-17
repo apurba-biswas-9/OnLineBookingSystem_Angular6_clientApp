@@ -27,6 +27,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
             this.currentUser = user;
         });
 
+        if (this.currentUser)
         this.myFunction();
     }
 
@@ -49,6 +50,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
 
     myFunction() {
+
+        if(this.currentUser){
         setInterval(()=>{
             this.cartService.getCount(this.currentUser.userId).pipe().subscribe(count  => {
 
@@ -56,7 +59,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
                 console.log(count);
                 this.totalCount = count;
             });
-     },2000)}
+     },3000)
+    }
+    }
 
 
     

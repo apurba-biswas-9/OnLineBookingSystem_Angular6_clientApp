@@ -10,13 +10,13 @@
       <div *ngFor="let book of books">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title">{{book.booksTitle}}</h5>
-            <p class="card-text">Price :  ₹{{book.price}}</p> 
+            <h5 class="card-title">{{book.BooksTitle}}</h5>
+            <p class="card-text">Price :  ₹{{book.Price}}</p> 
           <div>
             <p>
                 Quantity
-                <input type="number" readonly="readonly"  [(ngModel)]="book.units" #price value="1" min="1"   max="10" style="width:40px" name="Quantity" >
-                Total Price :   ₹{{book.price * price.value}}
+                <input type="number" readonly="readonly"  [(ngModel)]="book.Units" #price value="1" min="1"   max="10" style="width:40px" name="Quantity" >
+                Total Price :   ₹{{book.Price * price.value}}
           </p>
         </div>    
       </div>
